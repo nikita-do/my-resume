@@ -61,7 +61,7 @@ header {
 
     border-radius: 8px;
 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Name */
@@ -257,49 +257,128 @@ footer {
 
     @page {
         size: A4;
-        margin: 0.4in;
-    }
-
-    body {
-        padding: 0;
-        margin: 0;
-        max-width: 100%;
-        font-size: 9pt;
-        line-height: 1.1;
-    }
-
-    header {
-        box-shadow: none;
-        margin-bottom: 4px;
-        padding-bottom: 2px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        margin: 4px 0;
-        line-height: 1.1;
-    }
-
-    p, li {
-        margin: 2px 0;
-    }
-
-    ul, ol {
-        margin: 2px 0 2px 16px;
-        padding: 0;
-    }
-
-    section {
-        break-inside: avoid;
-        margin-bottom: 4px;
-        padding: 0;
-    }
-
-    a {
-        color: black;
-        text-decoration: none;
+        margin: 0.35in;
     }
 
     * {
+        margin: 0 !important;
+        padding: 0 !important;
         box-sizing: border-box;
+    }
+
+    body {
+        max-width: 100%;
+        font-size: 8.7pt;
+        line-height: 1.05;
+        color: black;
+        padding: 0.15in !important;
+    }
+
+    /* HEADER */
+
+    header {
+        box-shadow: none;
+        border-radius: 0;
+        margin-bottom: 6px !important;
+        padding: 6px !important;
+    }
+
+    header h1 {
+        font-size: 18pt;
+        margin-bottom: 2px !important;
+    }
+
+    #subtitle,
+    .tagline,
+    .contact-info {
+        font-size: 8pt;
+        margin-bottom: 2px !important;
+    }
+
+    /* PROFILE */
+
+    .profile-box {
+        width: 55px;
+        height: 55px;
+        margin: 4px auto !important;
+    }
+
+    .profile-box img {
+        top: 0;
+    }
+
+    /* SECTIONS */
+
+    main section {
+        margin-bottom: 6px !important;
+    }
+
+    main h2 {
+        font-size: 10pt;
+        margin-bottom: 3px !important;
+        padding-left: 4px !important;
+        border-left-width: 2px;
+    }
+
+    /* TEXT */
+
+    .title,
+    .organization,
+    .time,
+    .description,
+    .skills,
+    p,
+    li {
+        font-size: 8pt;
+        line-height: 1.05;
+    }
+
+    .title {
+        font-weight: 700;
+    }
+
+    .time,
+    .skills {
+        font-style: italic;
+    }
+
+    /* LISTS */
+
+    ul,
+    ol {
+        margin-left: 14px !important;
+    }
+
+    li {
+        margin-bottom: 1px !important;
+    }
+
+    /* PROJECTS */
+
+    .project {
+        margin-top: 4px !important;
+    }
+
+    /* FOOTER */
+
+    footer {
+        margin-top: 6px !important;
+        padding-top: 4px !important;
+        font-size: 7pt;
+    }
+
+    /* LINKS */
+
+    a {
+        color: black !important;
+        text-decoration: none;
+    }
+
+    /* AVOID PAGE BREAKS */
+
+    section,
+    .project,
+    li {
+        break-inside: avoid;
     }
 }
