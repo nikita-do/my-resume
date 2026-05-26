@@ -254,18 +254,52 @@ footer {
 /* ---------- PRINT / PDF ---------- */
 
 @media print {
-    * {
-        margin: 0 !important;
-        padding: 0 !important;
-        line-height: 1 !important;
+
+    @page {
+        size: A4;
+        margin: 0.4in;
     }
 
     body {
-        font-size: 8.5pt;
-        padding: 0.3in !important;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        font-size: 9pt;
+        line-height: 1.1;
+    }
+
+    header {
+        box-shadow: none;
+        margin-bottom: 4px;
+        padding-bottom: 2px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 4px 0;
+        line-height: 1.1;
+    }
+
+    p, li {
+        margin: 2px 0;
+    }
+
+    ul, ol {
+        margin: 2px 0 2px 16px;
+        padding: 0;
     }
 
     section {
-        margin-bottom: 4px !important;
+        break-inside: avoid;
+        margin-bottom: 4px;
+        padding: 0;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    * {
+        box-sizing: border-box;
     }
 }
