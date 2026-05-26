@@ -1,0 +1,276 @@
+/* =========================================
+   LaTeX-style Academic Resume
+   (keeps your blue color palette)
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: rgb(12, 12, 122);
+    --soft-blue: #e6f0fa;
+
+    --text: #111;
+    --muted: #555;
+    --line: #cfcfcf;
+
+    --body-width: 760px;
+
+    --font-main:
+        "STIX Two Text",
+        "Latin Modern Roman",
+        "Computer Modern Serif",
+
+        serif;
+}
+
+/* ---------- BODY ---------- */
+
+body {
+    font-family: var(--font-main);
+
+    font-size: 17px;
+    line-height: 1.62;
+
+    color: var(--text);
+    background: #fff;
+
+    max-width: var(--body-width);
+
+    margin: 0 auto;
+    padding: 2.7rem 2rem;
+
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    text-align: center;
+
+    margin-bottom: 2.5rem;
+    padding: 1.4rem 1rem;
+
+    background: var(--soft-blue);
+
+    border-bottom: 3px solid var(--primary-blue);
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Name */
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+
+    color: var(--primary-blue);
+
+    letter-spacing: 0.02em;
+}
+
+/* ---------- HEADER TEXT CENTERING ---------- */
+
+#subtitle,
+.tagline,
+.contact-info {
+    text-align: center;
+}
+
+#subtitle {
+    font-size: 1.1rem;
+    color: #444;
+
+}
+
+.tagline {
+    margin-bottom: 0.5rem;
+
+    color: #333;
+
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Links */
+
+header a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Icons */
+
+header i {
+    margin: 0 0.25rem;
+    color: #444;
+}
+
+/* ---------- PROFILE IMAGE ---------- */
+
+.profile-box {
+    width: 150px;
+    height: 150px;
+
+    overflow: hidden;
+
+    margin: 1rem auto;
+
+    border: 1px solid #bfc8d6;
+
+    background: #fff;
+
+    border-radius: 4px;
+}
+
+.profile-box img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 13px;
+
+    object-fit: scale-down;
+}
+
+/* ---------- SECTIONS ---------- */
+
+main section {
+    margin-bottom: 2rem;
+}
+
+/* Section Titles */
+
+main h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+
+    color: var(--primary-blue);
+
+    border-left: 4px solid var(--primary-blue);
+
+    padding-left: 0.6rem;
+
+    margin-bottom: 0.9rem;
+
+    letter-spacing: 0.01em;
+}
+
+/* ---------- TEXT BLOCKS ---------- */
+
+.title {
+    font-weight: 600;
+    font-size: 1.05rem;
+
+    color: #111;
+
+    margin-bottom: 0.15rem;
+}
+
+.organization {
+    font-style: italic;
+    color: #222;
+}
+
+.time {
+    font-style: italic;
+    color: var(--muted);
+
+    margin-bottom: 0.45rem;
+
+    font-size: 0.95rem;
+}
+
+.description {
+    color: #333;
+
+    margin-bottom: 0.45rem;
+}
+
+.skills {
+    margin-left: 1.3rem;
+    font-style: italic;
+
+    font-size: 0.96rem;
+
+    color: #444;
+}
+
+/* ---------- LISTS ---------- */
+
+ul {
+    margin-left: 1.5rem;
+    margin-top: 0.4rem;
+}
+
+ul li {
+    margin-bottom: 0.24rem;
+}
+
+/* Tight spacing for technical skills */
+
+#technical-skills li {
+    margin-bottom: 0.08rem;
+}
+
+/* ---------- PROJECTS ---------- */
+
+.project {
+    margin-top: 1rem;
+}
+
+/* ---------- PARAGRAPHS ---------- */
+
+p {
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+
+    font-size: 0.9rem;
+
+    color: #666;
+
+    border-top: 1px solid var(--line);
+
+    padding-top: 1rem;
+
+    margin-top: 2.5rem;
+}
+
+/* ---------- PRINT / PDF ---------- */
+
+@media print {
+
+    body {
+        padding: 0;
+        max-width: 100%;
+        font-size: 11pt;
+    }
+
+    header {
+        box-shadow: none;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    section {
+        break-inside: avoid;
+    }
+}
